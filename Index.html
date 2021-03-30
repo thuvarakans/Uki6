@@ -1,126 +1,66 @@
 <!DOCTYPE html>
+<html>
 <head>
-<title>UkiLife</title>
-
-<style>
-#rcorners1 {
-  border-radius: 10px;
-  background: lightblue;
-  padding: 30px;
-  width: 200px;
-  height: 200px;
-  font-size: 10px;
-
-}
-
-#rcorners2 {
-  border-radius: 10px;
-  background: #c3c7a7;
-  padding: 30px;
-  width: 30%;
-  height: 130px;
-  font-size: 10px;
-  float:left;
-}
-
-#rcorners3 {
-  border-radius: 10px;
-  background: #c3c7a7;
-  padding: 30px;
-  width: 30%;
-  height: 130px;
-  font-size: 10px;
-  float:right;
-  margin:10px 0px 10px 10px
-}
-
-
-
-#ul1 {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-   }
-
-
-#li1 {
-     display: inline;
-  }
-
-
-  .footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color:lightblue;
-   color: black;
-   text-align: center;
-}
-
-
-
-</style>
+  <title>Youtube Videos Download Script code - nicesnippets.com</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
 </head>
-
-<body>
-
-  <div>
-    <center>
-
-          <a href="Index.html">Home </a> <a href="time thuva.html">form</a> <a href="uki stu timetable.html">Timetable</a>
-
- </center> </div>
-
-
-  <center> <img src="download.png" alt="Uki logo"> </center><p>
-
-
-
-<center>
-<div style="float: center; width: 20%; height: 80px; background-color:lightblue"  id="rcorners1">
-  <h2>Welcome to Uki: Stepping Stone To Tech Life</h2>
-  <p>Uki is a coding school by Yarl IT Hub, which offers six
-     months-long intensive, in-class training program that trains
-      students to acquire skills needed to join tech
-      companies as interns/ junior developers or become entrepreneurs.
-</p>
-</div>
-</center>
-
-
-
-<div id="rcorners2">
-  <h2 align="left">Courses</h2>
-  <p>Uki is a coding school by Yarl IT Hub, which offers six
-     months-long intensive, in-class training program that trains
-      students to acquire skills needed to join tech
-      companies as interns/ junior developers or become entrepreneurs.
-</p>
-
-<ul>
-<li>  Programming</li>
-<li>  Basic Business Skills</li>
-<li>  English</li>
-<li>  Personal Coaching</li>
-</ul>
-</div>
-
-
-
-<div id="rcorners3">
-  <h2>Coding Accelerator Program</h2>
-  <p>Learn to code in 6 months (Full time)<br>
-Uki is a life-changing program with a proven track record of enabling those who had completed secondary school education to join the tech industry. The outcome-based learning experience at Uki is a meticulously designed program which has been developed by tech industry practitioners and skilled teachers. It ensures a transformational development of the technical skills, language skills, business skills and interpersonal skills of each student who completes the course.
-</p>
-</div>
-<b/>
-
-    <p> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <div class="footer">
-  <p>2019 © Uki. All Rights Reserved. An initiative by Yarl IT Hub</p>
-</div>
-    </p>
-
+<body class="bg-dark">
+  <div class="col-md-6 offset-md-3 mt-5">
+    <div class="card">
+      <div class="card-header bg-info">
+        <h5>Youtube Videos Download Any Online Videos - nicesnippets.com</h5>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="text-weight"><b>Online Videos Link:</b></label>
+              <input type="txt" name="link" class="form-control link" required>
+            </div>
+          </div>
+        </div>
+        <form class="form-download">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="text-weight"><b>Select Video Fromate:</b></label>
+                <select class="form-control formte" required>
+                  <option selected disabled>Select Video Formate</option>
+                  <option value="mp3">Mp3</option>
+                  <option value="mp4a">144 Mp4</option>
+                  <option value="360">360 Mp4</option>
+                  <option value="480">480 Mp4</option>
+                  <option value="720">720 Mp4</option>
+                  <option value="1080">1080 Mp4</option>
+                  <option value="4k">4k Mp4</option>
+                  <option value="8k">8k Mp4</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group mt-4 download-video">
+                <button class="btn btn-success btn-block click-btn-down" type="submit">Click Me</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
+                          <script type="text/javascript">
+                             $(".click-btn-down").click(function(){
+                             var link = $(".link").val();
+                             var fromate = $(".formte").children("option:selected").val();
+                             var src =""+link+"="+fromate+"";
+                             downloadVideo(link,fromate);
+                              });
+                             function downloadVideo(link,fromate) {
+                             $('.download-video').html('<iframe style="width:100%;height:60px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/button/?url='+link+'&f='+fromate+'"></iframe>');
+                                      }
+                          </script>
 </html>
